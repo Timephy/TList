@@ -2,18 +2,18 @@
 public class TList <T>
 {
     private TElement<T> first;
-    
+
     public boolean blockSameObj = true;
     public boolean blockNull = true;
 
     public TList()
     {
-        first = new TEnd();
+        first = new TEnd<T>();
     }
 
     public TList(T[] obj)
     {
-        first = new TEnd();
+        first = new TEnd<T>();
         add(obj);
     }
 
@@ -110,6 +110,6 @@ public class TList <T>
 
     // remove all from list
     public void empty() {
-        first = new TEnd();
+        first = new TEnd<T>();
     }
 }
