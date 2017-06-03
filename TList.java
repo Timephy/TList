@@ -1,4 +1,6 @@
-
+/**
+*   List Implementation by Tim Guggenmos (C) 2017
+*/
 public class TList <T>
 {
     private TElement<T> first;
