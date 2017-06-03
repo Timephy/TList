@@ -3,8 +3,6 @@
 *   initially for LifeVsLife
 */
 
-package list;
-
 public class TList <T> {
     private TElement<T> first;
 

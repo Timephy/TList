@@ -1,4 +1,3 @@
-package list;
 
 abstract public class TElement <T> {
     // other proj

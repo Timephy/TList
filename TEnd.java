@@ -1,4 +1,3 @@
-package list;
 
 public class TEnd <T> extends TElement <T> {
 
