@@ -1,6 +1,6 @@
 abstract public class TElement <T>
 {
-
+    // comment
     abstract public void _showList(int thisId);
 
     abstract public int length();
