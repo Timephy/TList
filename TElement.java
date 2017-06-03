@@ -1,12 +1,7 @@
 abstract public class TElement <T>
 {
 
-    //  3.0
-
-//c
-
     abstract public void _showList(int thisId);
-    //cccc
 
     abstract public int length();
 
