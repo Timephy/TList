@@ -1,6 +1,6 @@
 
 abstract public class TElement <T> {
-    // other proj
+
     abstract public void _showList(int thisId);
 
     abstract public int length();
