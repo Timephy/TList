@@ -1,5 +1,6 @@
-abstract public class TElement <T>
-{
+package list;
+
+abstract public class TElement <T> {
     // other proj
     abstract public void _showList(int thisId);
 

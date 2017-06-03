@@ -1,6 +1,6 @@
+package list;
 
-public class TNode <T> extends TElement<T>
-{
+public class TNode <T> extends TElement<T> {
     private TElement<T> next;
     private T obj;
 
