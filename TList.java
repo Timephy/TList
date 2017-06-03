@@ -4,6 +4,7 @@
 */
 
 public class TList <T> {
+    
     private TElement<T> first;
 
     public boolean blockSameObj = true;
