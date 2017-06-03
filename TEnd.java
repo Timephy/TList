@@ -1,5 +1,6 @@
-public class TEnd <T> extends TElement <T>
-{
+package list;
+
+public class TEnd <T> extends TElement <T> {
 
     public int length() {
         return 0;

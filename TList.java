@@ -2,8 +2,10 @@
 *   List Implementation by Tim Guggenmos (C) 2017
 *   initially for LifeVsLife
 */
-public class TList <T>
-{
+
+package list;
+
+public class TList <T> {
     private TElement<T> first;
 
     public boolean blockSameObj = true;
