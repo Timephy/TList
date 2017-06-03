@@ -50,6 +50,18 @@ public class TList <T> {
         }
     }
 
+    // add obj in as last
+    public void addLast(T obj) {
+        insert(obj, length() - 1);
+    }
+
+    //add obj[] in as last - so that obj[0] == list[length()]
+    public void addLast(T[] obj) {
+        for (int i = 0; i < obj.length; i++) {
+            insert(obj[i], length());
+        }
+    }
+
     // add obj at index
     public void insert(T obj, int id) {
         if (!(obj == null && blockNull)) {
