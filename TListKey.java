@@ -2,12 +2,12 @@
 // List for object with method "int key()" to find the object in an list with one key
 public class TListKey <T, K> extends TList <T> {
 
+    @SuppressWarnings("unchecked")
     public int getIdWithKey(K key)
     {
         int l = length();
         for (int i = 0; i < l; i++) {
-            TListObject<K> obj = (TListObject<K>) get(i);
-            if (obj.key() == key) {
+            if (((TListObject<K>) get(i)).key() == key) {
                 return i;
             }
         }
