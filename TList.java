@@ -1,7 +1,7 @@
 /**
-*   List Implementation by Tim Guggenmos (C) 2017
-v.3
-*/
+ * List Implementation by Tim Guggenmos (C) 2017
+ * v.3
+ */
 
 public class TList <T> {
 
