@@ -1,5 +1,6 @@
 /**
 *   List Implementation by Tim Guggenmos (C) 2017
+v.3
 */
 
 import java.util.Iterator;
