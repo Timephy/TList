@@ -3,8 +3,6 @@
 v.3
 */
 
-import java.util.Iterator;
-
 public class TList <T> {
 
     protected TElement<T> first;
