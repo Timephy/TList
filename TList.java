@@ -1,8 +1,7 @@
 /**
-*   List Implementation by Tim Guggenmos (C) 2017
-*/
-
-import java.util.Iterator;
+ * List Implementation by Tim Guggenmos (C) 2017
+ * v0.2
+ */
 
 public class TList <T> {
 
