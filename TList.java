@@ -5,7 +5,7 @@
 
 import java.util.Iterator;
 
-public class TList <T> implements Iterable <T>{
+public class TList <T> implements Iterable <T> {
 
     protected TElement<T> first;
 
