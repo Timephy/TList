@@ -3,7 +3,9 @@
  * v.3
  */
 
-public class TList <T> {
+import java.util.Iterator;
+
+public class TList <T> implements Iterable <T>{
 
     protected TElement<T> first;
 
@@ -169,6 +171,38 @@ public class TList <T> {
     public void empty()
     {
         first = new TEnd<T>();
+    }
+
+    // implements Iterable<T>
+
+    public int size()
+    {
+        return length();
+    }
+
+    //already defined
+    //public T get(int i) { /*... */ }
+
+    public Iterator<T> iterator() {
+        return new TListIterator();
+    }
+
+    class TListIterator implements Iterator<T> {
+
+        private int index = 0;
+
+        public boolean hasNext() {
+            return index < size();
+        }
+
+        public T next() {
+            return get(index++);
+        }
+
+        public void remove() {
+            throw new UnsupportedOperationException("not supported yet");
+
+        }
     }
 
 }
