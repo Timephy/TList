@@ -173,8 +173,21 @@ public class TList <T> implements Iterable <T>{
         first = new TEnd<T>();
     }
 
-    // implements Iterable<T>
 
+    // implements Iterable<T> for foreach capabilities
+
+    // for (T obj : list) {
+    //     //body of the loop
+    // }
+    // is the same as:
+    // for (Iterator<T> iter = list.iterator(); iter.hasNext(); ) {
+    //     T obj = iter.next();
+    //     //body of the loop
+    // }
+
+    /**
+     * = length() - just because of implements Iterable<T>
+     */
     public int size()
     {
         return length();
@@ -183,10 +196,16 @@ public class TList <T> implements Iterable <T>{
     //already defined
     //public T get(int i) { /*... */ }
 
+    /**
+     * Returns a TListIterator<T>
+     */
     public Iterator<T> iterator() {
         return new TListIterator();
     }
 
+    /**
+     * TListIterator has methods hasNext(), next() (and remove()) for foreach capabilities
+     */
     class TListIterator implements Iterator<T> {
 
         private int index = 0;
