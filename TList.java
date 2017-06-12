@@ -42,6 +42,11 @@ public class TList <T> implements Iterable <T> {
         return first.length();
     }
 
+    public boolean isEmpty()
+    {
+        return length() == 0;
+    }
+
     // add obj in as first
     public void add(T obj)
     {
