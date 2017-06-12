@@ -1,6 +1,6 @@
 /**
  * List Implementation by Tim Guggenmos (C) 2017
- * v.3
+ * v0.4
  */
 
 import java.util.Iterator;
@@ -67,7 +67,7 @@ public class TList <T> implements Iterable <T> {
     // add obj in as last
     public void addLast(T obj)
     {
-        insert(obj, length() - 1);
+        insert(obj, length());
     }
 
     //add obj[] in as last - so that obj[0] == list[length()]
@@ -222,6 +222,13 @@ public class TList <T> implements Iterable <T> {
             throw new UnsupportedOperationException("not supported yet");
 
         }
+    }
+
+    public static void main(String[] args)
+    {
+        TList<String> list = new TList<String>("First");
+        list.addLast("Last");
+        list._showList();
     }
 
 }
