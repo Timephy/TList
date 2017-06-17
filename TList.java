@@ -1,11 +1,12 @@
 /**
  * List Implementation by Tim Guggenmos (C) 2017
- * v.3
+ * v0.4
  */
 
 import java.util.Iterator;
+
 // Importierung des Iterators (kann alle Elemente nacheinander auslesen)
-public class TList <T> implements Iterable <T>{
+public class TList <T> implements Iterable <T> {
 
     protected TElement<T> first;
 
@@ -56,10 +57,16 @@ public class TList <T> implements Iterable <T>{
         return first.length();
     }
 
+
     /**
      * Methode, die einen Knoten (mit einem bestimmten Objekt) am Anfang der Liste einfügt
      * -> add obj in as first
      */
+    public boolean isEmpty()
+    {
+        return length() == 0;
+    }
+    // add obj in as first
     public void add(T obj)
     {
         if (!(obj == null && blockNull)) {
@@ -90,7 +97,7 @@ public class TList <T> implements Iterable <T>{
      */
     public void addLast(T obj)
     {
-        insert(obj, length() - 1);
+        insert(obj, length());
     }
 
     /**
@@ -225,9 +232,21 @@ public class TList <T> implements Iterable <T>{
         first = new TEnd<T>();
     }
 
-    // implements Iterable<T>
+  
+    // implements Iterable<T> for foreach capabilities
+
+    // for (T obj : list) {
+    //     //body of the loop
+    // }
+    // is the same as:
+    // for (Iterator<T> iter = list.iterator(); iter.hasNext(); ) {
+    //     T obj = iter.next();
+    //     //body of the loop
+    // }
+
     /**
      * Methode, die die Länge gibt
+     * size() = length() - just needed because of implements Iterable<T>
      */
     public int size()
     {
@@ -238,10 +257,16 @@ public class TList <T> implements Iterable <T>{
     //already defined
     //public T get(int i) { /*... */ }
 
+    /**
+     * Returns a TListIterator<T>
+     */
     public Iterator<T> iterator() {
         return new TListIterator();
     }
 
+    /**
+     * TListIterator has methods hasNext(), next() (and remove()) for foreach capabilities
+     */
     class TListIterator implements Iterator<T> {
 
         private int index = 0;
@@ -258,6 +283,13 @@ public class TList <T> implements Iterable <T>{
             throw new UnsupportedOperationException("not supported yet");
 
         }
+    }
+
+    public static void main(String[] args)
+    {
+        TList<String> list = new TList<String>("First");
+        list.addLast("Last");
+        list._showList();
     }
 
 }
