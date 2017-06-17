@@ -3,7 +3,7 @@
  * v.3
  */
 
-import java.util.Iterator; 
+import java.util.Iterator;
 // Importierung des Iterators (kann alle Elemente nacheinander auslesen)
 public class TList <T> implements Iterable <T>{
 
@@ -11,7 +11,7 @@ public class TList <T> implements Iterable <T>{
 
     public boolean blockSameObj = true;
     public boolean blockNull = true;
-    
+
     // drei verschiedene Konstruktoren:
     /**
      * Konstruktor, bei dem die Anfangsreferenz auf ein Objekt der Klasse TEnd gelegt wird
@@ -29,7 +29,7 @@ public class TList <T> implements Iterable <T>{
         first = new TEnd<T>();
         add(obj);
     }
-    
+
     /**
      * Konstruktor, bei dem die Anfangsreferenz auf ein Objekt der Klasse TEnd gelegt wird und zugleich ein Feld mit Typ Objekt hinzugefügt wird
      */
@@ -40,7 +40,7 @@ public class TList <T> implements Iterable <T>{
     }
 
     /**
-     * Methode, die das erste TElement aufruft die Liste auszugeben. Ihm wird 0 als aktuelle Id (=Id des ersten TElements gegeben  
+     * Methode, die das erste TElement aufruft die Liste auszugeben. Ihm wird 0 als aktuelle Id (=Id des ersten TElements gegeben
      */
     public void _showList()
     {
@@ -49,7 +49,7 @@ public class TList <T> implements Iterable <T>{
     }
 
     /**
-     * Methode, die die Elemente zählt  
+     * Methode, die die Elemente zählt
      */
     public int length() // == count
     {
@@ -79,7 +79,7 @@ public class TList <T> implements Iterable <T>{
      */
     public void add(T[] obj)
     {
-        for (int i = obj.length - 1; i >= 0; i--) { //for-Schleife zählt i von der Feldlänge von obj bis 0 
+        for (int i = obj.length - 1; i >= 0; i--) { //for-Schleife zählt i von der Feldlänge von obj bis 0
             add(obj[i]);
         }
     }
@@ -123,7 +123,7 @@ public class TList <T> implements Iterable <T>{
     }
 
     /**
-     * Methode, die ein Objekt in das Feld mit dessen Id als Index einfügt  
+     * Methode, die ein Objekt in das Feld mit dessen Id als Index einfügt
      * -> add obj[] at index - so that: obj[0] == list[id]
      */
     public void insert(T[] obj, int id)
@@ -155,7 +155,7 @@ public class TList <T> implements Iterable <T>{
     }
 
     /**
-     * Methode, die die Id eines Objekts gibt  
+     * Methode, die die Id eines Objekts gibt
      * -> return index of obj
      */
     public int getId(T obj)
@@ -164,7 +164,7 @@ public class TList <T> implements Iterable <T>{
     }
 
     /**
-     * Methode, die den Wahrheitswert gibt, ob die Id eines Objektes >= 0 ist (also existiert) oder nicht 
+     * Methode, die den Wahrheitswert gibt, ob die Id eines Objektes >= 0 ist (also existiert) oder nicht
      */
     public boolean contains(T obj)
     {
@@ -172,7 +172,7 @@ public class TList <T> implements Iterable <T>{
     }
 
     /**
-     * Methode, die das zu einer Id gehörige Objekt entfernt  
+     * Methode, die das zu einer Id gehörige Objekt entfernt
      * -> remove obj at index
      */
     public void remove(int id)
@@ -193,7 +193,7 @@ public class TList <T> implements Iterable <T>{
     }
 
     /**
-     * Methode, die ein zu einer Id gehöriges Objekt entfernt und dieses ausgibt  
+     * Methode, die ein zu einer Id gehöriges Objekt entfernt und dieses ausgibt
      * -> remove obj
      */
     public T take(int id)
@@ -217,7 +217,7 @@ public class TList <T> implements Iterable <T>{
     }
 
     /**
-     * Methode, die alle Objekte der Liste entfernt 
+     * Methode, die alle Objekte der Liste entfernt
      * -> remove all from list
      */
     public void empty()

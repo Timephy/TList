@@ -10,13 +10,13 @@ public class TEnd <T> extends TElement <T>
     }
 
     /**
-     * bricht den Methodenaufruf ab 
+     * bricht den Methodenaufruf ab
      */
     public void _showList(int thisId)
     {
         return; // oder leerer Methodenrumpf
     }
-    
+
     /**
      * Methode, die den Wahrheitswert "true" zurückgibt, da beim Aufruf der Methode das Ende der Liste erreicht ist
      */
@@ -25,7 +25,7 @@ public class TEnd <T> extends TElement <T>
     }
 
     /**
-     * Methode, die einen neuen Knoten am Ende der Liste einfügt, wenn es noch kein Element mit der gesuchten Id gibt. Dieser Knoten wird als Nachfolger des zuvorigen letzten Knotens gesetzt 
+     * Methode, die einen neuen Knoten am Ende der Liste einfügt, wenn es noch kein Element mit der gesuchten Id gibt. Dieser Knoten wird als Nachfolger des zuvorigen letzten Knotens gesetzt
      */
     public TElement<T> insert(T obj, int id, int thisId)
     {
@@ -45,7 +45,7 @@ public class TEnd <T> extends TElement <T>
     }
 
     /**
-     * Methode, die das Feld von Objekten und zugehöriger Id gibt    
+     * Methode, die das Feld von Objekten und zugehöriger Id gibt
      */
     public T[] getArray(T[] array, int thisId)
     {

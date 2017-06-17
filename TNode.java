@@ -87,7 +87,7 @@ public class TNode <T> extends TElement <T> {
     }
 
     /**
-     * Methode, die die Objekte in einem Feld mit der zugehörigen Id als Index speichert    
+     * Methode, die die Objekte in einem Feld mit der zugehörigen Id als Index speichert
      */
     public T[] getArray(T[] array, int thisId)
     {
