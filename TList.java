@@ -232,7 +232,7 @@ public class TList <T> implements Iterable <T> {
         first = new TEnd<T>();
     }
 
-  
+
     // implements Iterable<T> for foreach capabilities
 
     // for (T obj : list) {
