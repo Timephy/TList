@@ -66,6 +66,7 @@ public class TList <T> implements Iterable <T> {
     {
         return length() == 0;
     }
+
     // add obj in as first
     public void add(T obj)
     {
