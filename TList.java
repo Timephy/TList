@@ -9,8 +9,15 @@ import java.util.Iterator;
 public class TList <T> implements Iterable <T> {
 
     protected TElement<T> first;
-
+    
+    /**
+     * Wenn bereits ein Objekt existiert, kann das exakt selbe kein weiteres mal erzeugt werden.
+     */
     public boolean blockSameObj = true;
+    
+    /**
+     * Wenn die Referenz null ist, wird nichts in die Liste eingefügt.
+     */
     public boolean blockNull = true;
 
     // drei verschiedene Konstruktoren:
@@ -67,7 +74,7 @@ public class TList <T> implements Iterable <T> {
         return length() == 0;
     }
 
-    // add obj in as first
+// add obj in as first
     public void add(T obj)
     {
         if (!(obj == null && blockNull)) {
