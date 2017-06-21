@@ -1,4 +1,6 @@
 
+package tlist;
+
 public class TEnd <T> extends TElement <T>
 {
     /**

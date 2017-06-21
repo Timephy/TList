@@ -1,4 +1,6 @@
 
+package tlist;
+
 public class TNode <T> extends TElement <T> {
 
     protected TElement<T> next;

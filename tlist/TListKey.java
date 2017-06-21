@@ -1,7 +1,9 @@
+
+package tlist;
+
 /**
  * List for object with method "int key()" to find the object in an list with one key
  */
-
 public class TListKey <T, K> extends TList <T> {
 
     @SuppressWarnings("unchecked")

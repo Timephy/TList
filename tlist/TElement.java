@@ -1,3 +1,6 @@
+
+package tlist;
+
 // abstrakte Klasse als Oberklasse von TNode und TEnd
 abstract public class TElement <T> {
 

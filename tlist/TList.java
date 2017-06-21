@@ -3,6 +3,8 @@
  * v0.4
  */
 
+package tlist;
+
 import java.util.Iterator;
 
 // Importierung des Iterators (kann alle Elemente nacheinander auslesen)
