@@ -12,7 +12,14 @@ public class TList <T> implements Iterable <T> {
 
     protected TElement<T> first;
 
+    /**
+     * Wenn bereits ein Objekt existiert, kann das exakt selbe kein weiteres mal erzeugt werden.
+     */
     public boolean blockSameObj = true;
+
+    /**
+     * Wenn die Referenz null ist, wird nichts in die Liste eingefügt.
+     */
     public boolean blockNull = true;
 
     // drei verschiedene Konstruktoren:
