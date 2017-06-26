@@ -4,14 +4,14 @@ package tlist;
 /**
  * List for object with method "K key()" to find the object in an list with a specific key - don't use 'int'!
  */
-public class TListKey <T, K> extends TList <T> {
+public class TListKey <T extends TListKeyObject<K>, K> extends TList <T> {
 
     @SuppressWarnings("unchecked")
     public int getIdKey(K key)
     {
         int l = length();
         for (int i = 0; i < l; i++) {
-            if (((TListKeyObject<K>) get(i)).key() == key) {
+            if ((get(i)).key() == key) {
                 return i;
             }
         }
@@ -27,7 +27,6 @@ public class TListKey <T, K> extends TList <T> {
                 return obj;
             }
         }*/
-
         for (T obj : this)
         {
             if (((TListKeyObject) obj).key() == key) {
