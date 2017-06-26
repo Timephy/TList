@@ -10,6 +10,9 @@ import java.util.Iterator;
 // Importierung des Iterators (kann alle Elemente nacheinander auslesen)
 public class TList <T> implements Iterable <T> {
 
+    /**
+     * Der erste Knoten bzw. EndKnoten
+     */
     protected TElement<T> first;
 
     /**
