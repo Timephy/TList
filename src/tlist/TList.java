@@ -16,7 +16,7 @@ public class TList <T> implements Iterable <T> {
     protected TElement<T> first;
 
     /**
-     * Wenn bereits ein Objekt existiert, kann das exakt selbe kein weiteres mal erzeugt werden.
+     * Wenn bereits ein Objekt existiert, kann das exakt selbe kein weiteres mal hinzugefügt werden.
      */
     public boolean blockSameObj = true;
 
@@ -82,14 +82,14 @@ public class TList <T> implements Iterable <T> {
     // add obj in as first
     public void add(T obj)
     {
-        if (!(obj == null && blockNull)) {
+        if (obj == null && blockNull) {
+            System.out.println("[List] TList.add(obj): obj == null - not added");
+        } else {
             if (!blockSameObj || getId(obj) < 0) {
                 first = new TNode<T>(obj, first);
             } else {
                 System.out.println("[List] TList.add(obj): obj already in the list - no douplet added");
             }
-        } else {
-            //System.out.println("[List] TList.add(obj): obj == null - not added");
         }
     }
 
@@ -148,9 +148,14 @@ public class TList <T> implements Iterable <T> {
      */
     public void insert(T[] obj, int id)
     {
-        for (int i = 0; i < obj.length; i++)
+        // for (int i = 0; i < obj.length; i++)
+        // {
+        //     insert(obj[i], id + i);
+        // }
+
+        for (int i = obj.length - 1; i >= 0; i--)
         {
-            insert(obj[i], id + i);
+            insert(obj[i], id);
         }
     }
 
