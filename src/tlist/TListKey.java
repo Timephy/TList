@@ -11,6 +11,12 @@ public class TListKey <T extends TListKeyObject<K>, K> extends TList <T> {
     //  */
     // public boolean blockSameKey = true;
 
+    /**
+     * Gibt die Id eines Objektes, welchen diesen Schlüssel besitzt, zurück.
+     * Existiert sie nicht, so gibt sie -1 zurück.
+     *
+     * @param K key Der gesuchte Schlüssel
+     */
     @SuppressWarnings("unchecked")
     public int getIdKey(K key)
     {
@@ -23,6 +29,9 @@ public class TListKey <T extends TListKeyObject<K>, K> extends TList <T> {
         return -1;
     }
 
+    /**
+     * Gibt das Objekt, welches diesen Schlüssel besitzt, zurück.
+     */
     public T getKey(K key)
     {
         int l = length();
@@ -41,16 +50,25 @@ public class TListKey <T extends TListKeyObject<K>, K> extends TList <T> {
         return null;
     }
 
+    /**
+     * Entfernt diesen Schlüssel.
+     */
     public void removeKey(K key)
     {
         remove(getIdKey(key));
     }
 
+    /**
+     * Gibt das Objekt zurück, das einen bestimmten Schlüssel hat, und entfernt es aus der Liste.
+     */
     public T takeKey(K key)
     {
         return take(getIdKey(key));
     }
-
+    
+    /**
+     * Überprüft, ob die zum Schlüssel gehörige Id existiert (>= 0 ist).
+     */
     public boolean containsKey(K key)
     {
         return getIdKey(key) >= 0;
